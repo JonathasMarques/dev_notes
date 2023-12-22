@@ -165,7 +165,7 @@ header {
     }
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 767px) {
 
     header {
         flex-direction: column;
