@@ -111,6 +111,8 @@ function addNote() {
   notes.push(noteObject);
 
   saveNotes(notes);
+
+  noteInput.value = "";
 }
 
 function generateId() {
@@ -201,13 +203,15 @@ function exportData() {
 
   element.target = "_blank";
 
-  element.download = "export.csv";
+  element.download = "notes.csv";
 
   element.click();
 }
 
 // Eventos
-addNoteBtn.addEventListener("click", () => addNote());
+addNoteBtn.addEventListener("click", () =>  {
+    addNote();
+})
 
 searchInput.addEventListener("keyup", (e) => {
   const search = e.target.value;
